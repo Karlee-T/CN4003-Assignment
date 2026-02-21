@@ -1,0 +1,141 @@
+
+:root{
+    --green: #32CD32; 
+    --light-green: #90EE90; 
+    --dark-green: #006400; 
+    --white: #FFFFFF; 
+    --black: #000000; 
+    --light-pink: #FFF0F5; 
+    -dark-pink: #FF69B4; 
+}
+
+* {
+    font-family: 'Courier';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600; transition: color 0.3s ease; } 
+    
+nav a:hover { 
+    color: var(--light-pink);
+
+}
+
+nav {
+    background: black;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 10;
+}
+
+body {
+    color: #FFFFFF;
+    background-color:#000000 ;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;}
+
+p {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header {
+    background: linear-gradient(120deg, var(--green), #145f14);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em; 
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em; 
+    margin-bottom: 20px; 
+    opacity: 0.9;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+table th, td {
+    border: 1px solid  #49c5b6;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    align-items: center; }
+
+#banner{
+    font-family:Roboto;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    padding: 20px;
+}
+
+#letstalkbutton{
+    background:lawngreen;
+    align-self: right;
+    width: 70px;
+    height: 40px;
+
+}
+
+#glenda {
+    background: #49c5b6;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 550px;
+    align-self: center;
+}
+
+#naomi {
+    background: #49c5b6;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 550px;
+}
+/* --- info for rounded corner borders from 
+https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius --- */
+#ines {
+    background: #49c5b6;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 550px;
+}

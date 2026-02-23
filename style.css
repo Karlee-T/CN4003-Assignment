@@ -10,7 +10,7 @@
 }
 
 * {
-    font-family: 'Courier';
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -98,13 +98,24 @@ table th, td {
 #banner{
     font-family:Roboto;
     color: white;
+    text-align: center;
     font-size: xx-large;
     text-align: center;
     padding: 20px;
 }
 
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
 #letstalkbutton{
-    background:lawngreen;
+    background:#aff024;
     align-self: right;
     width: 70px;
     height: 40px;
@@ -118,7 +129,7 @@ table th, td {
     border-radius: 25px;
     text-align: center;
     width: 550px;
-    align-self: center;
+    align-self:  center;
 }
 
 #naomi {
@@ -138,4 +149,18 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius --- */
     border-radius: 25px;
     text-align: center;
     width: 550px;
+}
+
+#queryform {
+    background: #49c5b6;
+    color: white;
+    padding: 80px 20px;
+    border-radius: 25px;
+    text-align: center;
+    width: 550px;
+}
+#whatareverticalfarms {
+    background: #49c5b6;
+    color: white;
+    align-content: center;
 }

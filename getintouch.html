@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>SunFarm Consulting - Vertical Farming Consultants</title>
+</head>
+
+
+<body>
+
+
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a>  </li><!--about us/our team/our clients-->
+        <li><a href= "services.html">Services</a>  </li> <!--services-->
+        <li class="dropdown">
+            <a class="dropbtn">Projects ▾</a>
+            <div class="dropdown-content">
+                <a href="projects.html">Case Studies</a>
+            <a href="ai.html">How We Use AI in Our Projects</a>
+        </div>
+      </li>
+      <li><a href="news.html">News</a></li>
+      <li class="dropdown">
+        <a class="dropbtn">Who are we? ▾</a>
+        <div class="dropdown-content">  
+          <a href="whoarewe.html">Meet the Team</a>
+           <a href="getintouch.html">Contact Us</a>
+            </div>
+    </ul>
+
+    <div id="letstalkbutton"><a href="" >LET'S TALK</a></div>
+    </nav>
+
+    <section id="queryform">
+    <h2>Submit your query</h2>
+    <form action="submit_query.php" method="post"> <!--change this to the name of the file that will handle the form submission-->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required>What are you enquiring about?</textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </section>      
+<footer>
+    <h2>Ready to Start Your Vertical Farming Journey?</h2>
+    <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
+    <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button><!--change this link to a link to the form?-->
+    <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026 </p>
+</footer>
+   

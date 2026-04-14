@@ -1,321 +1,354 @@
 :root {
-    --teal: #49c5b6;
-    --teal-dark: #35a99b;
-    --white: #FFFFFF;
-    --black: #000000;
-    --light-pink: #FFC0CB;
-    --hot-pink: #FF69B4;
+  /* consistent color usage across the site */
+  --teal: #49c5b6;
+  --teal-dark: #35a99b;
+  --white: #ffffff;
+  --black: #000000;
+  --light-pink: #ffc0cb;
+  --hot-pink: #ff69b4;
 }
 
+/*  global stylings  */
 * {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto", sans-serif; /* modern, clean font for a sleek look */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* ── BODY ── */
+/* body styling  */
 body {
-    background-color: var(--black);
-    color: var(--white);
-    line-height: 1.6;
+  background-color: var(--black);
+  color: var(--white);
+  line-height: 1.6; /* improves readability by increasing space between lines of text */
 }
 
-/* ── HEADINGS & TEXT ── */
-h1{
-    color: var(--teal);
-    text-align: center;
-    margin-bottom: 20px;
+/* styling for images  */
+.img-services {
+  margin-top: 30px;
+  display: flex; /* use flexbox to center the image */
+  justify-content: center;
+  align-items: center;
+}
+
+/*  headings  and text stylings */
+h1 {
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h2 {
-    color: var(--teal);
-    text-align: center;
-    margin-bottom: 40px;
+  color: var(--hot-pink);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 h3 {
-    color: var(--teal);
+  color: var(--teal);
 }
 
 p {
-    color: var(--white);
-    text-align: center;
-    margin-bottom: 20px;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* ── HEADER ── */
+/*  header  */
 header {
-    background: linear-gradient(120deg, var(--teal), var(--teal-dark));
-    color: var(--white);
-    padding: 90px 20px;
-    text-align: center;
+  background: linear-gradient(
+    120deg,
+    var(--teal),
+    var(--teal-dark)
+  ); /* gradient background */
+  color: var(--white);
+  padding: 90px 20px;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: var(--white);
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: var(--white);
 }
 
 header p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    opacity: 0.9;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  opacity: 0.9;
 }
 
-/* ── NAVIGATION ── */
+/*  navigation  */
 nav {
-    background: var(--black);
-    padding: 14px 16px;
-    position: sticky;
-    top: 0;
-    border-bottom: 1px solid var(--teal);
-    z-index: 10;
+  background: var(--black);
+  padding: 14px 16px;
+  position: sticky; /* keeps the nav at the top of the viewport when scrolling */
+  top: 0;
+  border-bottom: 2px solid var(--teal);
+  z-index: 10; /* ensures the nav stays above other content when scrolling */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 14px 16px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* space between nav items */
+  margin: 0;
+  padding: 14px 16px;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
+  text-decoration: none; /* removes default underline from links*/
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.2em;
+  transition: color 0.3s ease; /* smooth colour transition on hover */
 }
 
 nav a:hover {
-    color: var(--light-pink);
+  color: var(
+    --light-pink
+  ); /* colour change on hover for better user experience */
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between; /* space out nav items across the width of the navbar */
+  align-items: center;
 }
 
 .navbar a {
-    color: var(--white);
-    text-align: center;
-    padding: 14px 16px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+  color: var(--white);
+  text-align: center;
+  padding: 14px 16px;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: var(--light-pink);
-    background-color: transparent;
+  color: var(--light-pink);
+  background-color: transparent; /* keeps the background transparent on hover  */
 }
 
-/* ── DROPDOWN ── */
+/*  dropdown  */
 .dropdown {
-    position: relative;
+  position: relative; /* allows the dropdown content to be positioned absolutely within the dropdown container */
 }
 
 .dropbtn {
-    background: none;
-    color: var(--white);
-    padding: 14px 16px;
-    font-size: 1.2em;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
+  background: none;
+  color: var(--white);
+  padding: 14px 16px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .dropdown:hover .dropbtn {
-    color: var(--light-pink);
+  color: var(--light-pink);
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--black);
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(73, 197, 182, 0.25);
-    z-index: 100;
-    border: 1px solid var(--teal);
-    border-radius: 6px;
-    overflow: hidden;
+  display: none;
+  position: absolute;
+  top: 100%; /* positions the dropdown content directly below the dropdown button */
+  left: 0;
+  background-color: var(--black);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(73, 197, 182, 0.25); /* shadow for depth */
+  z-index: 100;
+  border: 1px solid var(--teal);
+  border-radius: 6px;
+  overflow: hidden; /* ensures dropdown content doesn't overflow the container */
 }
 
 .dropdown-content a {
-    display: block;
-    color: var(--white);
-    padding: 12px 16px;
-    text-decoration: none;
-    font-weight: normal;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: block; /* makes the links stack vertically */
+  color: var(--white);
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: normal;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .dropdown-content a:hover {
-    background-color: var(--light-pink);
-    color: var(--black);
+  background-color: var(--light-pink);
+  color: var(--black);
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
-/* ── SECTIONS ── */
+/*  sections  */
 section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* ── GRID ── */
+/*  grids  */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(260px, 1fr));
-    gap: 20px;
-    border-radius: 25px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    minmax(260px, 1fr)
+  ); /* creates 3 equal columns that are at least 260px wide, but can grow to fill available space */
+  gap: 20px;
+  border-radius: 25px;
+  text-align: center;
 }
 
-/* ── CONTAINER ── */
+.whoarewe-grid {
+  display: contents;
+  grid-template-columns: repeat(
+    1,
+    minmax(260px, 1fr)
+  ); /* single column layout for the who are we section to stack image and text vertically */
+  gap: 20px;
+  border-radius: 25px; /* rounded corners for a softer look */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
-
-/* ── TABLE ── */
-table th, table td {
-    border: 1px solid var(--teal);
-    border-collapse: collapse;
-    font-family: 'Arial', sans-serif;
-    padding: 10px;
-    color: var(--white);
+/*  table  */
+table th,
+table td {
+  border: 1px solid var(--teal);
+  border-collapse: collapse;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  color: var(--white);
 }
 
 table th {
-    background-color: var(--teal);
-    color: var(--black);
-    font-weight: bold;
+  background-color: var(--teal);
+  color: var(--black);
+  font-weight: bold;
 }
 
 table tr:hover {
-    background-color: rgba(73, 197, 182, 0.1);
+  background-color: rgba(
+    73,
+    197,
+    182,
+    0.1
+  ); /* highlight on hover for better readability */
 }
 
-/* ── BANNER ── */
+/* banner */
 #banner {
-    font-family: 'Roboto', sans-serif;
-    color: var(--teal);
-    text-align: center;
-    font-size: xx-large;
-    padding: 20px;
+  font-family: "Roboto", sans-serif;
+  color: var(--teal);
+  text-align: center;
+  font-size: xx-large; /* larger font size for emphasis */
+  padding: 20px;
 }
 
-/* ── CENTERED UTILITY ── */
+/*  centered utility  */
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* centers the element both vertically and horizontally */
+  color: var(--white);
+  text-align: center;
 }
 
-/* ── BUTTONS ── */
+/* lets talk button styling */
 #letstalkbutton {
-    background: var(--teal);
-    color: var(--black);
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 120px;
-    height: 40px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--teal);
+  color: var(--black);
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 120px;
+  height: 40px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 #letstalkbutton:hover {
-    background-color: var(--light-pink);
-    color: var(--black);
+  background-color: var(--light-pink);
+  color: var(--black);
 }
 
-/* ── CARDS (team / query / info boxes) ── */
-/* --- info for rounded corner borders from 
-https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius --- */
-#glenda,
-#naomi,
-#ines,
-#queryform {
-    background: var(--teal);
-    color: var(--white);
-    padding: 80px 20px;
-    border-radius: 25px;
-    text-align: center;
-    width: 550px;
-    align-self: center;
-}
-
-#glenda:hover,
-#naomi:hover,
-#ines:hover {
-    background-color: var(--teal-dark);
-    transition: background-color 0.3s ease;
-}
-
-/* ── WHAT ARE VERTICAL FARMS ── */
+/*  what are vertical farms section  */
 #whatareverticalfarms {
-    background: var(--teal);
-    color: var(--white);
-    align-content: center;
+  background: var(--teal);
+  color: var(--white);
+  align-content: center;
 }
 
+/* projects section */
+.project-label {
+  text-align: center;
+  text-transform: uppercase; /* uppercase for a more formal feel */
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  color: var(--black);
+  margin-bottom: 8px;
+}
 
+/*  projects- slideshow section  */
 
-/* ── PROJECTS SLIDE SHOW SECTION ── */
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+} /* Hide the images by default */
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
-  max-height: 40%;
-  position: relative;
+  max-width: 80%; /* limits the width of the slideshow to prevent it from becoming too large on wide screens */
+  max-height: 40%; /* limits the height of the slideshow to prevent it from taking up too much vertical space */
+  position: relative; /* allows for absolute positioning of the next/prev buttons and captions within the slideshow container */
   margin: auto;
 }
-
 
 .mySlides {
   width: 100%;
   height: 50%;
-  border-radius: 25px;
-  opacity: 0.9;
+  border-radius: 25px; /* rounded corners for a softer, more modern look */
+  opacity: 0.9; /* slightly transparent */
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
+  top: 50%; /* positions the buttons vertically centered within the slideshow container */
+  width: auto; /* allows the buttons to size based on their content */
+  margin-top: -22px; /* centers the buttons vertically */
   padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+  border-radius: 0 3px 3px 0; /* rounded corners for the buttons */
+  user-select: none; /* prevents text selection on click */
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px; /* rounded corners for the next button */
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+/* On hover, add a black background color with a little see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -334,23 +367,24 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius --- */
   color: #f2f2f2;
   font-size: 12px;
   padding: 8px 12px;
-  position: absolute;
+  position: absolute; /* position the number text at the top left corner of the slide */
   top: 0;
 }
 
 /* The dots/bullets/indicators */
 .dot {
-  cursor: pointer;
+  cursor: pointer; /* indicates the dots are clickable */
   height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
+  display: inline-block; /* makes the dots appear in a line and allows for spacing */
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -361,151 +395,499 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss3_border-radius --- */
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  /* simple fade-in animation for slideshow images */
+  from {
+    opacity: 0.4;
+  } /* start with a slightly transparent image for a smooth fade-in effect */
+  to {
+    opacity: 1;
+  } /* end with fully opaque image */
 }
 
 footer {
-    background: var(--teal-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--teal);
+  background: var(--teal-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--teal);
 }
 
-/* ── HOW WE USE AI PAGE — NEW CLASSES ── */
+/* how we use AI page */
 
 .intro-text {
-    max-width: 800px;
-    margin: 0 auto 60px;
-    text-align: center;
+  max-width: 80%;
+  margin: 0 auto 60px; /* centers the text and adds space below for separation from the next section */
+  text-align: center;
 }
 
 .intro-text p {
-    font-size: 1.1em;
-    line-height: 1.8;
+  font-size: 1.1em;
+  line-height: 1.8;
 }
 
 .section-label {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.8em;
-    color: var(--teal);
-    margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase; /* uppercase for a more formal, structured feel */
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+  color: var(--teal);
+  margin-bottom: 12px;
 }
 
 .ai-images {
-    width: 75%;
-    height: 300px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    border: 2px dashed var(--teal);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--teal);
-    font-size: 1em;
-    font-weight: 600;
-    margin: 40px 0;
-    letter-spacing: 0.05em;
+  width: 75%;
+  height: 300px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border: 2px dashed var(--teal);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  font-size: 1em;
+  font-weight: 600;
+  margin: 40px 0;
+  letter-spacing: 0.05em;
 }
 .ai-card {
-    background: rgba(0,0,0,0.15);
-    border: 1px solid rgba(0,0,0,0.25);
-    border-radius: 16px;
-    padding: 30px 20px;
-    transition: background 0.3s ease;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.25); /* subtle border to define card edges without overpowering the design */
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: background 0.3s ease;
 }
 
 .ai-card:hover {
-    background: rgba(0,0,0,0.28);
+  background: rgba(0, 0, 0, 0.28);
 }
 
 .ai-card h3 {
-    color: var(--black);
-    margin-bottom: 12px;
-    font-size: 1.1em;
+  color: var(--black);
+  margin-bottom: 12px;
+  font-size: 1.1em;
 }
 
 .ai-card p {
-    color: var(--black);
-    font-size: 0.95em;
-    text-align: center;
+  color: var(--black);
+  font-size: 0.95em;
+  text-align: center;
 }
 
 .ai-card .icon {
-    font-size: 2.2em;
-    margin-bottom: 12px;
+  font-size: 2.2em;
+  margin-bottom: 12px;
 }
 
 .benefit-card {
-    background: #111;
-    border: 1px solid var(--teal);
-    border-radius: 16px;
-    padding: 30px 24px;
-    text-align: center;
-    transition: border-color 0.3s ease, background 0.3s ease;
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease; /* smooth transition for hover effect */
 }
 
 .benefit-card:hover {
-    background: #1a1a1a;
-    border-color: var(--teal-dark);
+  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
+  border-color: var(--teal-dark);
 }
 
 .benefit-card h3 {
-    margin-bottom: 12px;
-    font-size: 1.05em;
+  margin-bottom: 12px;
+  font-size: 1.05em;
 }
 
 .benefit-card p {
-    font-size: 0.95em;
-    text-align: center;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease; /* smooth transition for hover effect */
+}
+
+.service-card:hover {
+  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
+  border-color: var(--teal-dark);
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.service-card p {
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.teal-card {
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease; /* smooth transition for hover effect */
+}
+
+.teal-card:hover {
+  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
+  border-color: var(--teal-dark);
+}
+
+.teal-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.05em;
+}
+
+.teal-card p {
+  font-size: 0.95em;
+  text-align: center;
 }
 
 .emerging-strip {
-    background: #0d0d0d;
-    border-top: 1px solid var(--teal);
-    border-bottom: 1px solid var(--teal);
-    padding: 60px 20px;
+  /* visually distinct section to break up content and highlight emerging trends in vertical farming */
+  background: #0d0d0d;
+  border-top: 1px solid var(--teal);
+  border-bottom: 1px solid var(--teal);
+  padding: 60px 20px;
 }
 
 .emerging-strip .inner {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+  max-width: 900px;
+  margin: 0 auto; /* centers the content */
+  text-align: center;
 }
 
 .emerging-strip h2 {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .emerging-strip p {
-    font-size: 1.05em;
-    line-height: 1.8;
-    margin-bottom: 16px;
+  font-size: 1.05em;
+  line-height: 1.8;
+  margin-bottom: 16px;
 }
 
 .cta-band {
-    background: linear-gradient(120deg, var(--teal), var(--teal-dark));
-    padding: 60px 20px;
-    text-align: center;
+  background: linear-gradient(
+    120deg,
+    var(--teal),
+    var(--teal-dark)
+  ); /* reuse header gradient for visual consistency */
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .cta-band h2 {
-    color: var(--black);
-    margin-bottom: 16px;
+  color: var(--black);
+  margin-bottom: 16px;
 }
 
 .cta-band p {
-    color: var(--black);
-    font-size: 1.1em;
-    margin-bottom: 30px;
+  color: var(--black);
+  font-size: 1.1em; /* slightly larger text for emphasis */
+  margin-bottom: 30px;
 }
 
-/* ── RESPONSIVE ── */
+/*  responsive  */
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
+  /* adjust grid for smaller screens */
+  .grid {
+    grid-template-columns: 1fr; /* stack items vertically on smaller screens */
+  }
+}
+
+/* who are we - team cards  */
+.team-grid {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  background: var(--teal);
+  border-radius: 25px;
+  padding: 40px;
+  transition: background-color 0.3s ease; /* smooth transition for hover effect */
+}
+
+.team-card:hover {
+  background-color: var(--teal-dark);
+}
+
+.team-card-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%; /* makes the image circular */
+  object-fit: cover; /* ensures the image covers the area without distortion */
+  flex-shrink: 0; /* prevents the image from shrinking when the card is resized */
+  border: 4px solid var(--white);
+}
+
+.team-card-text {
+  text-align: left;
+}
+
+.team-card-text h3 {
+  color: var(--black);
+  margin-bottom: 4px;
+  font-size: 1.3em;
+}
+
+.team-card-text h4 {
+  color: var(--black);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.team-card-text p {
+  color: var(--black);
+  text-align: left;
+  margin: 0;
+}
+
+/* stack image above text on small screens */
+@media (max-width: 700px) {
+  .team-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-card-text {
+    text-align: center;
+  }
+
+  .team-card-text p {
+    text-align: center;
+  }
+}
+/*  contact form page  */
+
+/* dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  color: var(--white);
+  padding: 14px 16px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown:hover .dropbtn {
+  color: var(--light-pink);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--black);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(73, 197, 182, 0.25);
+  z-index: 100;
+  border: 1px solid var(--teal);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  display: block;
+  color: var(--white);
+  padding: 12px 16px;
+  font-weight: normal;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--light-pink);
+  color: var(--black);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.form-section {
+  padding: 80px 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 48px 40px;
+}
+
+/*  form labels  */
+label {
+  display: block;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+/* form inputs, text area */
+input,
+select,
+textarea {
+  width: 100%;
+  background: #1a1a1a;
+  color: var(--white);
+  border: 1px solid var(--teal);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1em;
+  margin-bottom: 24px;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+  /* removes default browser outline and replaces with our own */
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--white);
+  background: #222;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2349c5b6' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  cursor: pointer;
+}
+
+/* style the select options */
+select option {
+  background: #1a1a1a;
+  color: var(--white);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* placeholder text colour */
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
+
+/*  submit button */
+#submitbutton {
+  background: var(--teal);
+  color: var(--black);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  padding: 14px;
+  font-size: 1em;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  margin-top: 8px;
+}
+
+#submitbutton:hover {
+  background-color: var(--light-pink);
+  color: var(--black);
+}
+
+/* message for successful submission */
+#successMessage {
+  /* camel case for ease of reading */
+  display: none;
+  background: var(--teal);
+  color: var(--black);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* error message */
+#errorMessage {
+  /* camel case for ease of reading */
+  display: none;
+  background: #c0392b;
+  color: var(--white);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    padding: 32px 20px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    gap: 12px;
+  }
+}
+.service-img {
+  width: 80%;
+  height: 40%;
+  border-radius: 8px;
+}
+
+.credential-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.includes-box {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.includes-box-teal {
+  margin: 0 auto;
+  max-width: 800px;
 }

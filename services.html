@@ -1,159 +1,305 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SunFarm Consulting - Our Services</title>
+  </head>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>SunFarm Consulting - Vertical Farming Consultants</title>
-</head>
-
-
-<body>
+  <body>
+    <!-- nav links -->
     <nav>
-    <ul>
-        <li><a href="index.html">Home</a>       </li><!--about us/our team/our clients-->
-        <li><a href= "services.html">Services</a>  </li> <!--services-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li class="dropdown">
-            <a class="dropbtn">Projects ▾</a>
-            <div class="dropdown-content">
-                <a href="projects.html">Case Studies</a>
+          <a class="dropbtn">Projects ▾</a>
+          <div class="dropdown-content">
+            <a href="projects.html">Case Studies</a>
             <a href="ai.html">How We Use AI in Our Projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn">Who are we? ▾</a>
-        <div class="dropdown-content">  
-          <a href="whoarewe.html">Meet the Team</a>
-           <a href="getintouch.html">Contact Us</a>
-            </div>
-    </ul>
-
-    <div id="letstalkbutton"><a href="" >LET'S TALK</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn">Who are we? ▾</a>
+          <div class="dropdown-content">
+            <a href="whoarewe.html">Meet the Team</a>
+            <a href="getintouch.html">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+      <button
+        id="letstalkbutton"
+        onclick="window.location.href = 'getintouch.html'"
+      >
+        Let's Talk
+      </button>
     </nav>
 
     <header>
-        <h1>Our Services</h1>
-        <p>Expert guidance, from first idea to first harvest — and beyond.</p>
+      <h1>Our Services</h1>
+      <p class="project-label">
+        Expert guidance, from first idea to first harvest — and beyond.
+      </p>
+      <!-- reusing section-label from services.html-->
     </header>
 
-
+    <!-- feasibility -->
     <section>
-        <p class="section-label">Where every project begins</p>
-        <h2>Feasibility Studies & Business Planning</h2>
+      <p class="section-label">Where every project begins</p>
+      <h2>Feasibility Studies & Business Planning</h2>
 
-        <div class="grid-2" style="margin-bottom: 30px;">
-            <div class="service-card">
-                <h3>Market Analysis & Financial Forecasting</h3>
-                <p>Before a single seed is planted or a single pound is invested, you need to know whether your vertical farm idea is viable — commercially, operationally, and logistically. We conduct in-depth market analysis to assess local and regional demand for your intended crops, identifying your most realistic customer base and benchmarking your proposition against the competitive landscape.</p>
-                <p>From there, we build robust financial models that account for capital expenditure, operational running costs, yield projections, and realistic revenue scenarios — giving you a clear view of break-even timelines and return on investment.</p>
-            </div>
-            <div class="service-card">
-                <h3>Location Planning & Site Assessment</h3>
-                <p>Location planning is a critical and often underestimated part of the process. Our team assesses potential sites for structural suitability, utility capacity, access and logistics, planning constraints, and proximity to your target market — ensuring that the building you commit to is genuinely fit for purpose before any money changes hands.</p>
-                <p>We prepare investor-ready business cases and full feasibility reports, giving you everything you need to move forward with confidence.</p>
-            </div>
+      <div class="grid-2" style="margin-bottom: 30px">
+        <div class="service-card">
+          <h3>Market Analysis & Financial Forecasting</h3>
+          <p>
+            Before a single seed is planted or a single pound is invested, you
+            need to know whether your vertical farm idea is viable —
+            commercially, operationally, and logistically. We conduct in-depth
+            market analysis to assess local and regional demand for your
+            intended crops, identifying your most realistic customer base and
+            benchmarking your proposition against the competitive landscape.
+          </p>
+          <p>
+            From there, we build robust financial models that account for
+            capital expenditure, operational running costs, yield projections,
+            and realistic revenue scenarios — giving you a clear view of
+            break-even timelines and return on investment.
+          </p>
         </div>
+        <div class="service-card">
+          <h3>Location Planning & Site Assessment</h3>
+          <p>
+            Location planning is a critical and often underestimated part of the
+            process. Our team assesses potential sites for structural
+            suitability, utility capacity, access and logistics, planning
+            constraints, and proximity to your target market — ensuring that the
+            building you commit to is genuinely fit for purpose before any money
+            changes hands.
+          </p>
+          <p>
+            We prepare investor-ready business cases and full feasibility
+            reports, giving you everything you need to move forward with
+            confidence.
+          </p>
+        </div>
+      </div>
 
-        <div class="includes-box">
-            <h3>What this service includes</h3>
-            <div class="grid">
-                <ul class="checklist">
-                    <li>Market demand analysis & customer segmentation</li>
-                    <li>Competitor landscape review</li>
-                </ul>
-                <ul class="checklist">
-                    <li>Full financial modelling & forecasting</li>
-                    <li>Site identification & suitability assessment</li>
-                </ul>
-                <ul class="checklist">
-                    <li>Business case preparation</li>
-                    <li>Investor-ready reporting</li>
-                </ul>
-            </div>
+      <div class="includes-box">
+        <h3>What this service includes</h3>
+        <div class="grid">
+          <ul class="checklist">
+            <li>Market demand analysis & customer segmentation</li>
+            <li>Competitor landscape review</li>
+            <li>Full financial modelling & forecasting</li>
+            <li>Site identification & suitability assessment</li>
+            <li>Business case preparation</li>
+            <li>Investor-ready reporting</li>
+          </ul>
         </div>
+      </div>
     </section>
 
-
+    <!-- design & engineering  -->
     <div class="service-band">
-        <div class="inner">
-            <p class="section-label" style="color: rgba(0,0,0,0.5);">Engineering your growing environment</p>
-            <h2 style="color: var(--black);">Farm Design & Engineering</h2>
-            <p style="color: var(--black); max-width: 750px; margin: 0 auto 40px;">Once the decision to proceed is made, the quality of your farm's design will define its performance for years to come. Our design and engineering team combines horticultural expertise with technical precision to create growing environments that are productive, efficient, and built to last.</p>
-
-            <div class="img-placeholder" style="border-color: rgba(0,0,0,0.3); color: rgba(0,0,0,0.45); background: rgba(0,0,0,0.1);">[ Image — architectural render or blueprint of a vertical farm floor plan ]</div>
-
-            <div class="grid" style="margin-top: 40px;">
-                <div class="teal-card">
-                    <h3>Site Layout & Space Planning</h3>
-                    <p>Detailed layouts that make the most of every available square metre, balancing growing capacity with the practical requirements of harvesting, processing, packing, and logistics.</p>
-                </div>
-                <div class="teal-card">
-                    <h3>System Design & Engineering</h3>
-                    <p>Growing tier configuration, hydroponic or aeroponic system selection, LED lighting specification, climate control architecture, and nutrient delivery networks — all integrated into a coherent, AI-manageable whole.</p>
-                </div>
-                <div class="teal-card">
-                    <h3>Automation & Workflow</h3>
-                    <p>Automation embedded from the outset. We plan not just how your farm grows crops, but how people move through and work within it — minimising labour bottlenecks and maximising throughput from day one.</p>
-                </div>
-            </div>
-
-            <div class="includes-box-teal">
-                <h3>What this service includes</h3>
-                <div class="grid">
-                    <ul class="checklist checklist-dark">
-                        <li>Full site layout & space planning</li>
-                        <li>Growing system design & specification</li>
-                    </ul>
-                    <ul class="checklist checklist-dark">
-                        <li>LED lighting & climate control engineering</li>
-                        <li>Automation integration & smart system design</li>
-                    </ul>
-                    <ul class="checklist checklist-dark">
-                        <li>Workflow & operational layout optimisation</li>
-                        <li>Project management through to installation</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="inner">
+        <p class="section-label">Engineering your growing environment</p>
+        <h2>Farm Design & Engineering</h2>
+        <p style="max-width: 750px; margin: 0 auto 40px">
+          Once the decision to proceed is made, the quality of your farm's
+          design will define its performance for years to come. Our design and
+          engineering team combines horticultural expertise with technical
+          precision to create growing environments that are productive,
+          efficient, and built to last.
+        </p>
+        <p>Image from Shutterstock.</p>
+        <div class="img-services">
+          <img
+            src="Images/blueprint.jpg"
+            alt="Architectural blueprint of a vertical farm."
+            class="service-img"
+          />
+          <br />
         </div>
+
+        <div class="grid" style="margin-top: 40px">
+          <div class="teal-card">
+            <h3>Site Layout & Space Planning</h3>
+            <p>
+              Detailed layouts that make the most of every available square
+              metre, balancing growing capacity with the practical requirements
+              of harvesting, processing, packing, and logistics.
+            </p>
+          </div>
+          <div class="teal-card">
+            <h3>System Design & Engineering</h3>
+            <p>
+              Growing tier configuration, hydroponic or aeroponic system
+              selection, LED lighting specification, climate control
+              architecture, and nutrient delivery networks — all integrated into
+              a coherent, AI-manageable whole.
+            </p>
+          </div>
+          <div class="teal-card">
+            <h3>Automation & Workflow</h3>
+            <p>
+              Automation embedded from the outset. We plan not just how your
+              farm grows crops, but how people move through and work within it —
+              minimising labour bottlenecks and maximising throughput from day
+              one.
+            </p>
+          </div>
+        </div>
+
+        <div class="includes-box-teal">
+          <h3>What this service includes</h3>
+          <div class="grid">
+            <ul class="checklist checklist-dark">
+              <li>Full site layout & space planning</li>
+              <li>Growing system design & specification</li>
+              <li>LED lighting & climate control engineering</li>
+              <li>Automation integration & smart system design</li>
+              <li>Workflow & operational layout optimisation</li>
+              <li>Project management through to installation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
 
-    
-   <section>
-        <p class="section-label">Our credentials</p>
-        <h2>Certified, Compliant & Committed</h2>
+    <!-- operational strategy -->
+    <section>
+      <p class="section-label">Running it well</p>
 
-        <div class="grid-2">
-            <div class="credential-card">
-                <span class="badge">DEFRA Certified</span>
-                <h3>Department for Environment, Food & Rural Affairs</h3>
-                <p>SUNFARM Consultancy holds certification from DEFRA, the UK government body responsible for policy and regulation across food, farming, and the natural environment. Our certification reflects our commitment to operating within the highest standards of food safety, agricultural practice, and environmental responsibility.</p>
-                <p>For clients supplying into retail or hospitality supply chains, working with a DEFRA-certified consultancy provides an important layer of credibility and compliance confidence from day one.</p>
-                <div class="img-placeholder img-placeholder-short"><img src="Images/defra.jpeg" width="500px" height="300px" alt="Department for Environment Food and Rural Affairs logo, a government department in the UK."> </div>
-            </div>
-            <div class="credential-card">
-                <span class="badge">B Corp Compliant</span>
-                <h3>Business as a Force for Good</h3>
-                <p>Our B Corp compliance reflects a commitment to meeting rigorous standards of social and environmental performance, accountability, and transparency. In practice, this means:</p>
-                <ul class="checklist" style="margin-top: 12px;">
-                    <li>Ethical supply chain standards across all materials and technology partners</li>
-                    <li>100% operational carbon offset, supporting clients on their own net-zero journey</li>
-                    <li>Real Living Wage paid to all staff and contractors as a minimum</li>
-                    <li>Annual revenue dedicated to community growing and urban food education</li>
-                    <li>Full transparency via our published annual impact statement</li>
-                </ul>
-                <div class="img-placeholder img-placeholder-short">[ Image — B Corp logo / sustainability visual ]</div>
-            </div>
+      <h2>Operational Strategy</h2>
+
+      <p style="max-width: 750px; margin: 0 auto 40px">
+        A well-designed farm still needs to be run well. SUNFARM's operational
+        strategy service ensures that once your facility is up and running, it
+        performs to its full potential — consistently, efficiently, and
+        profitably.
+      </p>
+
+      <div class="grid">
+        <div class="benefit-card">
+          <h3>Crop Planning</h3>
+          <p>
+            Tailored crop plans matched to your market, facility, and seasonal
+            demand — determining which varieties to grow, in what volumes, and
+            on what rotation schedule to maximise both yield and revenue.
+          </p>
         </div>
+        <div class="benefit-card">
+          <h3>Labour Modelling</h3>
+          <p>
+            The right team structure from day one, with clear roles, workflows,
+            and staffing levels matched to the scale and complexity of your
+            operation — so you are never over or under resourced.
+          </p>
+        </div>
+        <div class="benefit-card">
+          <h3>Performance Monitoring</h3>
+          <p>
+            Detailed AI-generated reporting on yield, energy, water usage, and
+            crop health, plus scheduled SUNFARM consultancy reviews to keep your
+            farm improving as your business grows.
+          </p>
+        </div>
+      </div>
     </section>
-</body>
 
-<footer>
-    <h2>Ready to Start Your Vertical Farming Journey?</h2>
-    <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
-    <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button><!--change this link to a link to the form?-->
-    <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026 </p>
-</footer>
+    <!--  credentials section  -->
+    <section>
+      <p class="section-label">Our credentials</p>
+      <h2>Certified, Compliant & Committed</h2>
 
+      <div class="grid-2">
+        <div class="credential-card">
+          <h3>Department for Environment, Food & Rural Affairs Certified</h3>
+          <p>
+            SUNFARM Consultancy holds certification from DEFRA, the UK
+            government body responsible for policy and regulation across food,
+            farming, and the natural environment. Our certification reflects our
+            commitment to operating within the highest standards of food safety,
+            agricultural practice, and environmental responsibility.
+          </p>
+          <p>
+            For clients supplying into retail or hospitality supply chains,
+            working with a DEFRA-certified consultancy provides an important
+            layer of credibility and compliance confidence from day one.
+          </p>
+          <div class="img-services">
+            <a
+              href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs/about/our-governance"
+              target="_blank"
+            >
+              <img
+                src="Images/defra.jpeg"
+                alt="Department for Environment, Food and Rural Affairs logo."
+                class="credential-img"
+              /><br /><br /><br /><br /><br />
+            </a>
+          </div>
+        </div>
+
+        <div class="credential-card">
+          <h3>Proudly B Corp Compliant — Business as a Force for Good</h3>
+          <p>
+            Our B Corp compliance reflects a commitment to meeting rigorous
+            standards of social and environmental performance, accountability,
+            and transparency. In practice, this means:
+          </p>
+          <ul class="checklist" style="margin-top: 12px">
+            <li>
+              Ethical supply chain standards across all materials and technology
+              partners
+            </li>
+            <li>
+              100% operational carbon offset, supporting clients on their own
+              net-zero journey
+            </li>
+            <li>
+              Real Living Wage paid to all staff and contractors as a minimum
+            </li>
+            <li>
+              Annual revenue dedicated to community growing and urban food
+              education
+            </li>
+            <li>Full transparency via our published annual impact statement</li>
+          </ul>
+          <div class="img-services">
+            <a href="https://www.bcorporation.net/" target="_blank">
+              <img
+                src="Images/bcorp.jpg"
+                alt="B Corp logo, indicating commitment to social and environmental responsibility."
+                class="credential-img"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <!-- Call to action   -->
+      <h2>Ready to Start Your Vertical Farming Journey?</h2>
+      <p>
+        Whether you have a fully formed business plan or simply an idea you'd
+        like to explore, SUNFARM Consultancy is here to help. Get in touch today
+        to arrange your initial consultation.<br />
+      </p>
+      <button
+        id="letstalkbutton"
+        onclick="window.location.href = 'getintouch.html'"
+      >
+        Let's Talk</button
+      ><br />
+      <i
+        >We got into vertical farming early because we believed in where it was
+        going. A decade later, the industry is proving us right — and it's only
+        getting started.</i
+      >
+      <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
+    </footer>
+  </body>
 </html>

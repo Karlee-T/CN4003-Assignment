@@ -5,82 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>SunFarm Consulting - Vertical Farming Consultants</title>
+    <title>SunFarm Consulting - Who Are We?</title>
 </head>
 
-
 <body>
-    <nav>
-    <ul>
-        <li><a href="index.html">Home</a>  </li><!--about us/our team/our clients-->
-        <li><a href= "services.html">Services</a>  </li> <!--services-->
-        <li class="dropdown">
-            <a class="dropbtn">Projects ▾</a>
-            <div class="dropdown-content">
-                <a href="projects.html">Case Studies</a>
-            <a href="ai.html">How We Use AI in Our Projects</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a class="dropbtn">Who are we? ▾</a>
-        <div class="dropdown-content">  
-          <a href="whoarewe.html">Meet the Team</a>
-           <a href="getintouch.html">Contact Us</a>
-            </div>
-    </ul>
 
-    <div id="letstalkbutton"><a href="" >LET'S TALK</a></div>
+    <!--  navigation links  -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Projects ▾</a>
+                <div class="dropdown-content">
+                    <a href="projects.html">Case Studies</a>
+                    <a href="ai.html">How We Use AI in Our Projects</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn">Who are we? ▾</a>
+                <div class="dropdown-content">
+                    <a href="whoarewe.html">Meet the Team</a>
+                    <a href="getintouch.html">Contact Us</a>
+                </div>
+            </li>
+        </ul>
+        <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button> <!--  call to action button  -->
     </nav>
 
-<section id="whoarewe">
-    <h2>Who are we?</h2>
-    <p>Get to know the team, based here in East London, UK. With a combined experience of over 50 years in vertical farming, our team of experts is dedicated to helping you succeed in the world of sustainable agriculture. </p>
-       <div class="grid>
-        <div class="card" div id="glenda">
-            <h3>Glenda Smyth</h3> <h4><i>Founder & Lead Consultant</i></h4>
-            <img src="Images/People/glendasmyth.jpg" width="300px" height="200px" alt="Image of Glenda Smiyth, founder of SUNFARM Consulting.">
-            <p>Glenda Smyth, founder of SUNFARM has 25 years agricultral experience in setting up urban farms, vertical farms across London and the UK. With a PhD in biology from University of East London, 
-                Mary spent the first 10 years of her career working for Dyson as part of their agricultral sector. She could see the future in vertical farming and so began consulting in 2006. 20 years later 
-            SUNFARM Consulting</p>
+    <header>
+    <h1>Who Are We?</h1>
+    <p class="project-label"> Get to know the team, based here in East London, UK. With a combined experience of over 50 years in vertical farming,
+    our team of experts is dedicated to helping you succeed in the world of sustainable agriculture.</p><!-- reusing section-label from services.html-->
+    </header>
+
+    <!-- team cards sit in a vertical column -->
+    <div class="team-grid">
+
+        <!--─ Glenda -->
+        <div class="team-card" id="glenda">
+            <div class="team-card-image"> 
+                <img src="Images/People/glendasmyth.jpg" alt="Image of Glenda Smyth, founder of SUNFARM Consulting.">
+            </div>
+            <div class="team-card-text">
+                <h3>Glenda Smyth</h3>
+                <h4><i>Founder & Lead Consultant</i></h4>
+                <p>Glenda Smyth, founder and owner of SUNFARM, has 25 years of agricultural experience setting up urban and vertical farms across London and the UK.
+                With a PhD in Biology from the University of East London, Glenda spent the first decade of her career working for Dyson as part of their agricultural division.
+                She could see the future in vertical farming and began consulting in 2006. Twenty years later, SUNFARM Consultancy stands as one of the UK's most respected
+                vertical farm consultancies.</p>
+            </div>
         </div>
 
-        <div class="card" div id="naomi">
-            <h3>Naomi Aguirra</h3> <h4><i>Mechanic Design Engineer</i></h4>
-            <img src="Images/People/naomiaguirra.jpg" width="300px" height="200px" alt="Image of Naomi Aguirra, mechanic design engineer at SUNFARM Consulting.">
-            <p>Text text text. PhD in spacedust engineering </p>
+            <!--  Naomi card -->
+            <div class="team-card" id="naomi">
+                <div class="team-card-image">
+                    <img src="Images/People/naomiaguirra.jpg" alt="Image of Naomi Aguirra, Lead Mechanical Design Engineer at SUNFARM Consulting.">
+                </div>
+                <div class="team-card-text">
+                    <h3>Naomi Aguirra</h3>
+                    <h4><i>Lead Mechanical Design Engineer</i></h4>
+                    <p>Naomi Aguirra is our Lead Mechanical Design Engineer, with over a decade of experience in controlled environment engineering and sustainable infrastructure design.
+                        Naomi oversees the technical delivery of every farm we build — from system specification and climate control architecture through to installation and commissioning.
+                        Her expertise spans hydroponic mechanics, smart automation, and energy-efficient systems design, ensuring that every SUNFARM facility is engineered to perform
+                        from day one and improve over time.</p>
+                </div>
+            </div>
+
+            <!-- Ines card  -->
+            <div class="team-card" id="ines">
+                <div class="team-card-image">
+                    <img src="Images/People/inescorreia.jpg" alt="Image of Ines Correia, Operational Strategy Manager at SUNFARM Consulting.">
+                </div>
+                <div class="team-card-text">
+                    <h3>Ines Correia</h3>
+                    <h4><i>Operational Strategy Manager</i></h4>
+                    <p>Ines is our Operational Strategy Manager, specialising in helping clients build farming operations that are efficient, commercially resilient, and ready to scale.
+                        With a background in agricultural business management and supply chain optimisation, Ines works closely with clients to develop crop plans, labour structures,
+                        and performance frameworks tailored to their specific markets and facilities. Her focus is on ensuring that every farm SUNFARM delivers grows well, runs well,
+                        and is set up for long-term success.</p>
+                </div>
+            </div>
+
+            <!-- Ruby card -->
+            <div class="team-card" id="ruby">
+                <div class="team-card-image">
+                    <img src="Images/People/ruby.jpg" alt="Image of Ruby Chen, Lead AI and Data Systems Analyst at SUNFARM Consulting.">
+                </div>
+                <div class="team-card-text">
+                    <h3>Ruby Chen</h3>
+                    <h4><i>Lead AI & Data Systems Analyst</i></h4>
+                    <p>Ruby is our Lead AI & Data Systems Analyst, responsible for the design, integration, and ongoing optimisation of the smart technology platforms that power every
+                        SUNFARM facility. With a background in data science and precision agriculture, Ruby translates raw sensor data into actionable insight, fine-tuning the AI models
+                        that manage climate control, irrigation, and yield forecasting across our client portfolio. Her work ensures that every SUNFARM system continues to learn, adapt,
+                        and improve with every growing cycle.</p>
+                </div>
+            </div>
+            <br><br>
         </div>
+    </section>
 
-        <div class="card" div id="ines">
-            <h3>Ines Correia </h3> <h4><i>Operational Strategy Consultant</i></h4>
-            <img src="Images/People/inescorreia.jpg" width="300px" height="200px" alt="Image of Ines Correia, operational strategy consultant at SUNFARM Consulting.">
-            <p>Text text text. 15 years experience in operational business management. </p>
-    </div>
-    </p>
-</section>
-
-<section id="ContactUs">
-    <h2>Contact Us</h2>
-    <p><a href="mailto:2910237@uel.ac.uk">Get in touch to discuss your vertical farming project. </a></p> <!--change this link to a link to the form?-->
-</section>
-<div>
-<h2>Cultivating the future of vertical farming<br><br></h2> <!--This section outlines a case study for a web page on vertical farming-->
-<p>
-    
- 
-Sunfarm is dedicated to revolutionizing agriculture by providing innovative solutions and expert guidance to help you succeed in the world of vertical farming. <br>
-Our team of experienced consultants is passionate about sustainable agriculture and is committed to helping you achieve your goals in this rapidly growing industry. 
-<br>
-<img src="Images/VF images/verticalfarm-home.jpeg" width="500px" height="300px" alt="A vertical farm showcasing the innovative approach to agriculture.">
-</p>
-</div>
+    <!-- footer -->
+    <footer>
+        <h2>Ready to Start Your Vertical Farming Journey?</h2>
+        <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
+        <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button>
+        <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
+    </footer>
 
 </body>
-
-<footer>
-    <h2>Ready to Start Your Vertical Farming Journey?</h2>
-    <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
-    <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button><!--change this link to a link to the form?-->
-    <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026 </p>
-</footer>
-
 </html>

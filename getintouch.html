@@ -1,57 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="en">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>SunFarm Consulting - Vertical Farming Consultants</title>
-</head>
+  </head>
 
-
-<body>
-
-
+  <body>
+    <!--  navigation links  -->
     <nav>
-    <ul>
-        <li><a href="index.html">Home</a>  </li><!--about us/our team/our clients-->
-        <li><a href= "services.html">Services</a>  </li> <!--services-->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
         <li class="dropdown">
-            <a class="dropbtn">Projects ▾</a>
-            <div class="dropdown-content">
-                <a href="projects.html">Case Studies</a>
+          <a class="dropbtn">Projects ▾</a>
+          <div class="dropdown-content">
+            <a href="projects.html">Case Studies</a>
             <a href="ai.html">How We Use AI in Our Projects</a>
-        </div>
-      </li>
-      <li><a href="news.html">News</a></li>
-      <li class="dropdown">
-        <a class="dropbtn">Who are we? ▾</a>
-        <div class="dropdown-content">  
-          <a href="whoarewe.html">Meet the Team</a>
-           <a href="getintouch.html">Contact Us</a>
-            </div>
-    </ul>
-
-    <div id="letstalkbutton"><a href="" >LET'S TALK</a></div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn">Who are we? ▾</a>
+          <div class="dropdown-content">
+            <a href="whoarewe.html">Meet the Team</a>
+            <a href="getintouch.html">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+      <button
+        id="letstalkbutton"
+        onclick="window.location.href = 'getintouch.html'"
+      >
+        Let's Talk
+      </button>
     </nav>
 
-    <section id="queryform">
-    <h2>Submit your query</h2>
-    <form action="submit_query.php" method="post"> <!--change this to the name of the file that will handle the form submission-->
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required>What are you enquiring about?</textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
-    </section>      
-<footer>
-    <h2>Ready to Start Your Vertical Farming Journey?</h2>
-    <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
-    <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button><!--change this link to a link to the form?-->
-    <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026 </p>
-</footer>
-   
+    <div class="form-section">
+      <div class="form-card">
+        <h2 style="margin-bottom: 32px">Send Us an Enquiry</h2>
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Karlee Tani" />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="youremail@uel.ac.uk" />
+
+        <label for="interest">Tell us what you're interested in</label>
+        <select id="interest">
+          <option value="" disabled selected>Please select an option...</option>
+          <option value="quote">A quote</option>
+          <option value="project">Talk about a project scope</option>
+          <option value="microfarm">A micro farm for office or business</option>
+          <option value="events">Events</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="message">Your message</label>
+        <textarea
+          id="message"
+          placeholder="Tell us a bit more about your enquiry..."
+        ></textarea>
+
+        <button id="submitbutton" onclick="submitForm()">Submit Enquiry</button>
+
+        <div id="successMessage">
+          Thank you! Your enquiry has been sent. We'll be in touch soon.
+        </div>
+
+        <div id="errorMessage">
+          ✗ Please fill in all fields before submitting.
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <!-- Call to action   -->
+      <h2>Ready to Start Your Vertical Farming Journey?</h2>
+      <p>
+        Whether you have a fully formed business plan or simply an idea you'd
+        like to explore, SUNFARM Consultancy is here to help. Get in touch today
+        to arrange your initial consultation.<br />
+      </p>
+      <button
+        id="letstalkbutton"
+        onclick="window.location.href = 'getintouch.html'"
+      >
+        Let's Talk</button
+      ><br />
+      <i
+        >We got into vertical farming early because we believed in where it was
+        going. A decade later, the industry is proving us right — and it's only
+        getting started.</i
+      >
+      <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
+    </footer>
+
+    <script>
+      // JS for form. not worth moving to a new js file
+      //info taken from w3 schools.
+      // https://www.w3schools.com/js/js_validation.asp
+
+      function submitForm() {
+        // grab the values from each field
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var interest = document.getElementById("interest").value;
+        var message = document.getElementById("message").value;
+
+        // hide any previous messages
+        document.getElementById("successMessage").style.display = "none";
+        document.getElementById("errorMessage").style.display = "none";
+
+        // check all fields are filled in
+        if (name === "" || email === "" || interest === "" || message === "") {
+          document.getElementById("errorMessage").style.display = "block";
+          return; // stop here if something is missing
+        }
+
+        // build the mailto link with the form data filled in
+        var recipient = "testemail@uel.ac.uk";
+        var subject = encodeURIComponent(
+          "SUNFARM Enquiry: " + interest + " — from " + name,
+        );
+        var body = encodeURIComponent(
+          "Name: " +
+            name +
+            "\n" +
+            "Email: " +
+            email +
+            "\n" +
+            "Interested in: " +
+            interest +
+            "\n\n" +
+            "Message:\n" +
+            message,
+        );
+
+        var mailtoLink =
+          "mailto:" + recipient + "?subject=" + subject + "&body=" + body;
+
+        // open the user's email client with the details pre-filled
+        window.location.href = mailtoLink;
+
+        // show the success message
+        document.getElementById("successMessage").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

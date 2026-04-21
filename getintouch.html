@@ -1,99 +1,94 @@
 <!doctype html>
-
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>SunFarm Consulting - Vertical Farming Consultants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="SUNFARM Consulting - Contact Us">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - SunFarm Consulting</title>
   </head>
-
   <body>
-    <!--  navigation links  -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li class="dropdown">
-          <a class="dropbtn">Projects ▾</a>
-          <div class="dropdown-content">
-            <a href="projects.html">Case Studies</a>
-            <a href="ai.html">How We Use AI in Our Projects</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li class="dropdown">
+            <a class="dropbtn">Projects ▾</a>
+            <div class="dropdown-content">
+              <a href="projects.html">Case Studies</a>
+              <a href="ai.html">How We Use AI in Our Projects</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="dropbtn">Who are we? ▾</a>
+            <div class="dropdown-content">
+              <a href="whoarewe.html">Meet the Team</a>
+              <a href="getintouch.html">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+        <button
+          id="letstalkbutton"
+          onclick="window.location.href = 'getintouch.html'"
+        >
+          Let's Talk
+        </button>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div class="form-section">
+        <div class="form-card">
+          <h2 style="margin-bottom: 32px">Send Us an Enquiry</h2>
+
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Karlee Tani" aria-describedby="errorMessage">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="youremail@uel.ac.uk" aria-describedby="errorMessage">
+
+          <label for="interest">Tell us what you're interested in</label>
+          <select id="interest" aria-describedby="errorMessage">
+            <option value="" disabled selected>Please select an option...</option>
+            <option value="quote">A quote</option>
+            <option value="project">Talk about a project scope</option>
+            <option value="microfarm">A micro farm for office or business</option>
+            <option value="events">Events</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="message">Your message</label>
+          <textarea
+            id="message"
+            placeholder="Tell us a bit more about your enquiry..."
+            aria-describedby="errorMessage"
+          ></textarea>
+
+          <button id="submitbutton" onclick="submitForm()">Submit Enquiry</button>
+
+          <div id="successMessage" role="alert" aria-live="polite">
+            Thank you! Your enquiry has been sent. We'll be in touch soon.
           </div>
-        </li>
-        <li class="dropdown">
-          <a class="dropbtn">Who are we? ▾</a>
-          <div class="dropdown-content">
-            <a href="whoarewe.html">Meet the Team</a>
-            <a href="getintouch.html">Contact Us</a>
+
+          <div id="errorMessage" role="alert" aria-live="polite">
+            ✗ Please fill in all fields before submitting.
           </div>
-        </li>
-      </ul>
-      <button
-        id="letstalkbutton"
-        onclick="window.location.href = 'getintouch.html'"
-      >
-        Let's Talk
-      </button>
-    </nav>
-
-    <div class="form-section">
-      <div class="form-card">
-        <h2 style="margin-bottom: 32px">Send Us an Enquiry</h2>
-
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Karlee Tani" />
-
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="youremail@uel.ac.uk" />
-
-        <label for="interest">Tell us what you're interested in</label>
-        <select id="interest">
-          <option value="" disabled selected>Please select an option...</option>
-          <option value="quote">A quote</option>
-          <option value="project">Talk about a project scope</option>
-          <option value="microfarm">A micro farm for office or business</option>
-          <option value="events">Events</option>
-          <option value="other">Other</option>
-        </select>
-
-        <label for="message">Your message</label>
-        <textarea
-          id="message"
-          placeholder="Tell us a bit more about your enquiry..."
-        ></textarea>
-
-        <button id="submitbutton" onclick="submitForm()">Submit Enquiry</button>
-
-        <div id="successMessage">
-          Thank you! Your enquiry has been sent. We'll be in touch soon.
-        </div>
-
-        <div id="errorMessage">
-          ✗ Please fill in all fields before submitting.
         </div>
       </div>
-    </div>
-
+    </main>
     <footer>
       <!-- Call to action   -->
       <h2>Ready to Start Your Vertical Farming Journey?</h2>
-      <p>
-        Whether you have a fully formed business plan or simply an idea you'd
+      <p> Whether you have a fully formed business plan or simply an idea you'd
         like to explore, SUNFARM Consultancy is here to help. Get in touch today
-        to arrange your initial consultation.<br />
-      </p>
-      <button
-        id="letstalkbutton"
-        onclick="window.location.href = 'getintouch.html'"
-      >
-        Let's Talk</button
-      ><br />
-      <i
-        >We got into vertical farming early because we believed in where it was
+        to arrange your initial consultation.</p>
+
+      <button id="letstalkbutton"
+        onclick="window.location.href = 'getintouch.html'">Let's Talk</button>
+      <p><i>We got into vertical farming early because we believed in where it was
         going. A decade later, the industry is proving us right — and it's only
-        getting started.</i
-      >
+        getting started.</i></p>
       <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
     </footer>
 

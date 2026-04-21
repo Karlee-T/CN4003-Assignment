@@ -1,48 +1,52 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Discover our vertical farming services at SunFarm Consulting. From feasibility studies to operational strategy, we provide expert guidance for sustainable agriculture.">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <title>SunFarm Consulting - Our Services</title>
   </head>
 
   <body>
-    <!-- nav links -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li class="dropdown">
-          <a class="dropbtn">Projects ▾</a>
-          <div class="dropdown-content">
-            <a href="projects.html">Case Studies</a>
-            <a href="ai.html">How We Use AI in Our Projects</a>
-          </div>
-        </li>
-        <li class="dropdown">
-          <a class="dropbtn">Who are we? ▾</a>
-          <div class="dropdown-content">
-            <a href="whoarewe.html">Meet the Team</a>
-            <a href="getintouch.html">Contact Us</a>
-          </div>
-        </li>
-      </ul>
-      <button
-        id="letstalkbutton"
-        onclick="window.location.href = 'getintouch.html'"
-      >
-        Let's Talk
-      </button>
-    </nav>
-
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-      <h1>Our Services</h1>
-      <p class="project-label">
-        Expert guidance, from first idea to first harvest — and beyond.
-      </p>
-      <!-- reusing section-label from services.html-->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li class="dropdown">
+            <a class="dropbtn">Projects ▾</a>
+            <div class="dropdown-content">
+              <a href="projects.html">Case Studies</a>
+              <a href="ai.html">How We Use AI in Our Projects</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a class="dropbtn">Who are we? ▾</a>
+            <div class="dropdown-content">
+              <a href="whoarewe.html">Meet the Team</a>
+              <a href="getintouch.html">Contact Us</a>
+            </div>
+          </li>
+        </ul>
+        <button
+          id="letstalkbutton"
+          onclick="window.location.href = 'getintouch.html'"
+        >
+          Let's Talk
+        </button>
+      </nav>
     </header>
+    <main id="main-content">
+      <div class="page-header">
+        <h1>Our Services</h1>
+        <p class="project-label">
+          Expert guidance, from first idea to first harvest — and beyond.
+        </p>
+        <!-- reusing section-label from services.html-->
+      </div>
 
     <!-- feasibility -->
     <section>
@@ -87,16 +91,14 @@
 
       <div class="includes-box">
         <h3>What this service includes</h3>
-        <div class="grid">
-          <ul class="checklist">
-            <li>Market demand analysis & customer segmentation</li>
-            <li>Competitor landscape review</li>
-            <li>Full financial modelling & forecasting</li>
-            <li>Site identification & suitability assessment</li>
-            <li>Business case preparation</li>
-            <li>Investor-ready reporting</li>
-          </ul>
-        </div>
+        <ul class="checklist">
+          <li>Market demand analysis & customer segmentation</li>
+          <li>Competitor landscape review</li>
+          <li>Full financial modelling & forecasting</li>
+          <li>Site identification & suitability assessment</li>
+          <li>Business case preparation</li>
+          <li>Investor-ready reporting</li>
+        </ul>
       </div>
     </section>
 
@@ -112,14 +114,6 @@
           precision to create growing environments that are productive,
           efficient, and built to last.
         </p>
-        <p>Image from Shutterstock.</p>
-        <div class="img-services">
-          <img
-            src="Images/blueprint.jpg"
-            alt="Architectural blueprint of a vertical farm."
-            class="service-img"
-          />
-          <br />
         </div>
 
         <div class="grid" style="margin-top: 40px">
@@ -151,18 +145,16 @@
           </div>
         </div>
 
-        <div class="includes-box-teal">
+        <div class="includes-box">
           <h3>What this service includes</h3>
-          <div class="grid">
-            <ul class="checklist checklist-dark">
-              <li>Full site layout & space planning</li>
-              <li>Growing system design & specification</li>
-              <li>LED lighting & climate control engineering</li>
-              <li>Automation integration & smart system design</li>
-              <li>Workflow & operational layout optimisation</li>
-              <li>Project management through to installation</li>
-            </ul>
-          </div>
+          <ul class="checklist checklist">
+            <li>Full site layout & space planning</li>
+            <li>Growing system design & specification</li>
+            <li>LED lighting & climate control engineering</li>
+            <li>Automation integration & smart system design</li>
+            <li>Workflow & operational layout optimisation</li>
+            <li>Project management through to installation</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -219,14 +211,17 @@
           <p>
             SUNFARM Consultancy holds certification from DEFRA, the UK
             government body responsible for policy and regulation across food,
-            farming, and the natural environment. Our certification reflects our
-            commitment to operating within the highest standards of food safety,
-            agricultural practice, and environmental responsibility.
+            farming, and the natural environment. <br><Br>
+            Our certification reflects our commitment to operating within the highest standards of food safety,
+            agricultural practice, and environmental responsibility.<br>
+            DEFRA means that we are regularly audited and held to account on our practices.
           </p>
           <p>
             For clients supplying into retail or hospitality supply chains,
             working with a DEFRA-certified consultancy provides an important
-            layer of credibility and compliance confidence from day one.
+            layer of credibility and compliance confidence. <br><br>
+            For more informatiom about DEFRA, click on the image below.
+            <br>
           </p>
           <div class="img-services">
             <a
@@ -236,8 +231,7 @@
               <img
                 src="Images/defra.jpeg"
                 alt="Department for Environment, Food and Rural Affairs logo."
-                class="credential-img"
-              /><br /><br /><br /><br /><br />
+                class="credential-img"><br><br><br><br><br>
             </a>
           </div>
         </div>
@@ -273,32 +267,28 @@
                 src="Images/bcorp.jpg"
                 alt="B Corp logo, indicating commitment to social and environmental responsibility."
                 class="credential-img"
-              />
+             >
             </a>
           </div>
         </div>
       </div>
     </section>
-
+    </main>
     <footer>
       <!-- Call to action   -->
       <h2>Ready to Start Your Vertical Farming Journey?</h2>
       <p>
         Whether you have a fully formed business plan or simply an idea you'd
         like to explore, SUNFARM Consultancy is here to help. Get in touch today
-        to arrange your initial consultation.<br />
+        to arrange your initial consultation.
       </p>
       <button
         id="letstalkbutton"
-        onclick="window.location.href = 'getintouch.html'"
-      >
-        Let's Talk</button
-      ><br />
-      <i
-        >We got into vertical farming early because we believed in where it was
+        onclick="window.location.href = 'getintouch.html'">
+        Let's Talk</button>
+      <p><i>We got into vertical farming early because we believed in where it was
         going. A decade later, the industry is proving us right — and it's only
-        getting started.</i
-      >
+        getting started.</i></p>
       <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
     </footer>
   </body>

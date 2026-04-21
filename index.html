@@ -1,126 +1,108 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <meta name="description" content="SunFarm Consulting: Experts in vertical farming with AI-driven solutions for sustainable agriculture.">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="style.css">
     <title>SunFarm Consulting - Vertical Farming Consultants</title>
 </head>
-
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="dropdown">
+                    <a class="dropbtn">Projects ▾</a>
+                    <div class="dropdown-content">
+                        <a href="projects.html">Case Studies</a>
+                        <a href="ai.html">How We Use AI in Our Projects</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn">Who are we? ▾</a>
+                    <div class="dropdown-content">
+                        <a href="whoarewe.html">Meet the Team</a>
+                        <a href="getintouch.html">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+            <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section id="banner">
+            <video autoplay muted loop id="background-video" aria-label="A video of tomatoes growing">
+                <source src="Images/bannertomatoes.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="centered">
+                <h1>EMERGING<br>
+                SUSTAINABLE<br>
+                INNOVATIVE</h1>
+            </div>
+        </section>
+        <section id="home">
+            <img src="Images/SUNFARMConsultingLogo.png" width="150px" height="150px" alt="Logo for SUNFARM Consulting, a company specialising in vertical farming." class="logo">
+            <p>SUNFARM provides the strategic, technical and operational know-how to get vertical farms of any scale a reality. <br>
+                From development to optimisations in a controlled environment, we help growers, investors and companies build resilient and functional farming systems. With the clever use of AI to monitor and control growing conditions, optimal yields and quality year-round is ensured.</p>
+            <p>Vertical farming is one of the fastest-growing sectors in modern agriculture here at SUNFARM, it's driven by advances in AI, LED technology, and hydroponics that are making it more efficient and more affordable every year. <br>
+                As global demand for locally grown, sustainable produce continues to rise, the farms of tomorrow are already being built today. <br>
+                This emerging industry is transforming the way we grow food, and SUNFARM is at the forefront of this exciting revolution.</p>
+        </section>
 
-    <!--  navigation links  -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li class="dropdown">
-                <a class="dropbtn">Projects ▾</a>
-                <div class="dropdown-content">
-                    <a href="projects.html">Case Studies</a>
-                    <a href="ai.html">How We Use AI in Our Projects</a>
+        <section id="whatareverticalfarms">
+            <h2>SUNFARM Vertical Farms</h2>
+            <div class="grid" id="what-are-vertical-farms1"> <!-- 6 cards in a grid with icons and text -->
+                <div class="card">
+                    <h3>Pesticide free</h3>
+                    <img src="Images/Icons/acorn.png" width="70px" height="70px" alt="Icon of an acorn representing pesticide-free farming" style="align-items: center;">
+                    <p>SUNFARM vertical farms are 100% pesticide free, which means we don't need to wash our produce. This means it lasts longer!</p>
                 </div>
-            </li>
-            <li class="dropdown">
-                <a class="dropbtn">Who are we? ▾</a>
-                <div class="dropdown-content">
-                    <a href="whoarewe.html">Meet the Team</a>
-                    <a href="getintouch.html">Contact Us</a>
+                <div class="card" id="what-are-vertical-farms2">
+                    <h3>Reduce your impact on the environment</h3>
+                    <img src="Images/Icons/seeds.png" width="70px" height="70px" alt="Icon of a seed bag representing environmental sustainability" style="align-items: center;">
+                    <p>Reduce your impact on the environment. Grow local which reduces the amount of travel the produce makes.</p>
                 </div>
-            </li>
-        </ul>
+                <div class="card" id="what-are-vertical-farms3">
+                    <h3>Certainty for growers</h3>
+                    <img src="Images/Icons/leaf.png" width="70px" height="70px" alt="Icon of a leaf representing certainty in farming">
+                    <p> Unaffected by weather, scalable farms, consistent volume, predictable operating costs means you can rest assured with a SUNFARM vertical farm</p>
+                </div>
+                <div class="card" id="what-are-vertical-farms4">
+                    <h3>Reduce food waste</h3>
+                    <img src="Images/Icons/tomato.png" width="70px" height="70px" alt="Icon of a tomato representing reduced food waste">
+                    <p>Grown in secure facilities means the produce lasts longer, reducing food waste</p>
+                </div>
+                <div class="card" id="what-are-vertical-farms5">
+                    <h3>On demand technical expertise</h3>
+                    <img src="Images/Icons/settings.png" width="70px" height="70px" alt="Icon of a cog representing technical expertise" style="align-items: center;">
+                    <p>Over 25 years of experience to help make your vertical farm work for you</p>
+                </div>
+                <div class="card" id="what-are-vertical-farms6">
+                    <h3> AI Controlled for optimal growing</h3>
+                    <img src="Images/Icons/brain.png" width="70px" height="70px" alt="Icon of a brain representing AI control">
+                    <p>Controlled environments means the highest quality produce, all year round, smartly controlled by AI</p>
+                </div>
+            </div>
+        </section>        
+        
+        <section id="future-farming">
+            <h2>Cultivating the future of vertical farming</h2>
+            <p>Sunfarm is dedicated to revolutionizing agriculture by providing innovative solutions and expert guidance to help you succeed in the world of vertical farming. Our team of experienced consultants is passionate about sustainable agriculture and is committed to helping you achieve your goals in this rapidly growing industry.</p>
+            <img src="Images/VFImages/verticalfarm-home.jpeg" width="40%" height="30%" alt="A vertical farm showcasing the innovative approach to agriculture." class="centered-image">
+        </section>
+    </main>
+    <footer>
+        <h2>Ready to Start Your Vertical Farming Journey?</h2>
+        <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.</p>
         <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button>
-    </nav>
-
-
-    <div class="container" id="banner">
-        <video autoplay muted loop id="background-video"> <source src="Images/bannertomatoes.mp4" type="video/mp4">
-            Your browser does not support the video tag.  </video>
-    <div class =".centered"> 
-        <h1>EMERGING<br>
-        SUSTAINABLE<br>
-        INNOVATIVE</h1></div>
-    </div>
-
-<section id="home">
-     <img src="Images/SUNFARM Consulting Logo.png" width="150px" height="150px" alt="Logo for SUNFARM Consulting, a company specialising in vertical farming." align="left">
-
-    <p>SUNFARM provides the strategic, technical and operational know-how to get vertical farms of any scale a reality.
-        From development to optimisations in a controlled environment, we help growers, investors and companies build resilent and functional farming systems.
-        With the clever use of AI to monitor and control growing conditions, optimal yields and quality year-round is ensured.</p><br>
-        Vertical farming is one of the fastest-growing sectors in modern agriculture here at SUNFARM, it's driven by advances in AI, LED technology, and hydroponics 
-        that are making it more efficient and more affordable every year. 
-        As global demand for locally grown, sustainable produce continues to rise, the farms of tomorrow are already being built today. 
-        This emerging industry is transforming the way we grow food, and SUNFARM is at the forefront of this exciting revolution.
-</section>
-
-<section id="whatareverticalfarms">
-    <h2>SUNFARM Vertical Farms</h2>
-    <div class="grid" id="what-are-vertical-farms1"> <!-- 6 cards in a grid with icons and text -->
-        <div class="card"> 
-        <h3>Pesticide free</h3> 
-        <a href="https://www.flaticon.com/free-icons/acorn" title="acorn icons"">
-        <img src="Images/Icons/acorn.png" width="70px" height="70px" alt="an acorn icon." style="align-items: center;"></a>
-        <p>SUNFARM vertival farms are 100% pesticide free, which means we don't need to wash our produce. This means it lasts longer!</p> 
-    </div> 
-    <div class="card" id="what-are-vertical-farms2"> 
-        <h3>Reduce your impact on the environment</h3> 
-        <a href="https://www.flaticon.com/free-icons/seed-bag" title="seed bag icons">
-            <img src="Images/Icons/seeds.png" width="70px" height="70px" alt="an icon of a seed bag" style="align-items: center;"></a>
-        <p>Reduce your impact on the environment. Grow local which reduces the amount of travel the produce makes.</p> 
-    </div> 
-    <div class="card" id="what-are-vertical-farms3"> 
-        <h3>Certainty for growers</h3> 
-        <a href="https://www.flaticon.com/free-icons/leaf" title="leaf icons">
-            <img src="Images/Icons/leaf.png" width="70px" height="70px" alt="leaf icon"></a>
-        <p> Unaffected by weather, scalable farms, consistent volume, predictable operating costs means you can rest assured with a SUNFARM vertical farm</p> 
-    </div> 
-        <div class="card" id="what-are-vertical-farms4"> 
-        <h3>Reduce food waste</h3> 
-        <a href="https://www.flaticon.com/free-icons/tomato" title="tomato icons">
-            <img src="Images/Icons/tomato.png" width="70px" height="70px" alt="a tomato icon."></a>
-        <p>Grown in secure facilities means the produce lasts longer, reducing food waste</p> 
-    </div> 
-        <div class="card" id="what-are-vertical-farms5"> 
-        <h3>On demand technical expertise</h3> 
-        <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">
-            <img src="Images/Icons/settings.png" width="70px" height="70px" alt="a cog icon" style="align-items: center;"></a>
-        <p>Over 25 years of experience to help make your vertical farm work for you</p> 
-    </div> 
-        <div class="card" id="what-are-vertical-farms6"> 
-        <h3> AI Controlled for optimal growing</h3> 
-        <a href="https://www.flaticon.com/free-icons/brain" title="brain icons">
-            <img src="Images/Icons/brain.png" width="70px" height="70px" alt="icon of a brain"></a>
-        <p>Controlled enviroments means the highest quality produce, all year round, smartly controlled by AI
-           </p> 
-    </div> 
-</div>
-</section>  
-
-
-<div>
-<h2><br><br>Cultivating the future of vertical farming<br><br></h2> 
-<p>
-    
- 
-Sunfarm is dedicated to revolutionizing agriculture by providing innovative solutions and expert guidance to help you succeed in the world of vertical farming. <br>
-Our team of experienced consultants is passionate about sustainable agriculture and is committed to helping you achieve your goals in this rapidly growing industry. 
-<br>
-<img src="Images/VF images/verticalfarm-home.jpeg" width="40%" height="30%" alt="A vertical farm showcasing the innovative approach to agriculture.">
-</p>
-</div>
-
+        <p><i>We got into vertical farming early because we believed in where it was going. A decade later, the industry is proving us right — and it's only getting started.</i></p>
+        <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026</p>
+        <p>Icons by <a href="https://www.flaticon.com" target="_blank">Flaticon</a></p>
+    </footer>
 </body>
-
-<footer>
-    <h2>Ready to Start Your Vertical Farming Journey?</h2>
-    <p>Whether you have a fully formed business plan or simply an idea you'd like to explore, SUNFARM Consultancy is here to help. Get in touch today to arrange your initial consultation.<br></p>
-    <button id="letstalkbutton" onclick="window.location.href='getintouch.html'">Let's Talk</button><br>
-    <i>We got into vertical farming early because we believed in where it was going. A decade later, the industry is proving us right — and it's only getting started.</i>
-    <p>SUNFARM Consulting | Vertical Farm Consultancy | 2026 </p>
-</footer>
-
 </html>

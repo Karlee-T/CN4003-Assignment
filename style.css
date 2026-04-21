@@ -1,5 +1,8 @@
+/* SunFarm Consulting Website Styles */
+/* Organized CSS for the vertical farming website with semantic sections */
+
 :root {
-  /* consistent color usage across the site */
+  /* Custom CSS properties for consistent theming */
   --teal: #49c5b6;
   --teal-dark: #35a99b;
   --white: #ffffff;
@@ -8,30 +11,22 @@
   --hot-pink: #ff69b4;
 }
 
-/*  global stylings  */
 * {
-  font-family: "Roboto", sans-serif; /* modern, clean font for a sleek look */
+  /* Global reset for consistent box-sizing and typography */
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* body styling  */
 body {
+  /* Base body styles for dark theme */
   background-color: var(--black);
   color: var(--white);
-  line-height: 1.6; /* improves readability by increasing space between lines of text */
+  line-height: 1.6;
 }
 
-/* styling for images  */
-.img-services {
-  margin-top: 30px;
-  display: flex; /* use flexbox to center the image */
-  justify-content: center;
-  align-items: center;
-}
-
-/*  headings  and text stylings */
+/* Typography */
 h1 {
   color: var(--teal);
   text-align: center;
@@ -41,7 +36,7 @@ h1 {
 h2 {
   color: var(--hot-pink);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -54,617 +49,726 @@ p {
   margin-bottom: 20px;
 }
 
-/*  header  */
+/* Layout */
 header {
-  background: linear-gradient(
-    120deg,
-    var(--teal),
-    var(--teal-dark)
-  ); /* gradient background */
+  /* Hero header with gradient background */
+  background: var(--black); 
   color: var(--white);
-  padding: 90px 20px;
+  padding: 65px 20px;
   text-align: center;
 }
 
 header h1 {
+  /* Main heading in header */
+  color: var(--white);
   font-size: 3em;
   margin-bottom: 10px;
-  color: var(--white);
 }
 
 header p {
+  /* Subtitle in header */
   font-size: 1.2em;
   margin-bottom: 20px;
   opacity: 0.9;
 }
 
-/*  navigation  */
 nav {
+  /* Sticky navigation bar */
   background: var(--black);
-  padding: 14px 16px;
-  position: sticky; /* keeps the nav at the top of the viewport when scrolling */
-  top: 0;
   border-bottom: 2px solid var(--teal);
-  z-index: 10; /* ensures the nav stays above other content when scrolling */
+  padding: 14px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav ul {
-  list-style: none;
+  /* Navigation menu list */
   display: flex;
+  gap: 30px;
   justify-content: center;
-  gap: 30px; /* space between nav items */
+  list-style: none;
   margin: 0;
   padding: 14px 16px;
 }
 
 nav a {
-  text-decoration: none; /* removes default underline from links*/
+  /* Navigation links */
   color: var(--white);
-  font-weight: 600;
   font-size: 1.2em;
-  transition: color 0.3s ease; /* smooth colour transition on hover */
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(
-    --light-pink
-  ); /* colour change on hover for better user experience */
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between; /* space out nav items across the width of the navbar */
-  align-items: center;
-}
-
-.navbar a {
-  color: var(--white);
-  text-align: center;
-  padding: 14px 16px;
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
-}
-
-.navbar a:hover {
+  /* Hover effect for nav links */
   color: var(--light-pink);
-  background-color: transparent; /* keeps the background transparent on hover  */
 }
 
-/*  dropdown  */
 .dropdown {
-  position: relative; /* allows the dropdown content to be positioned absolutely within the dropdown container */
+  /* Dropdown menu container */
+  position: relative;
 }
 
 .dropbtn {
+  /* Dropdown button styling */
   background: none;
+  border: none;
   color: var(--white);
-  padding: 14px 16px;
+  cursor: pointer;
   font-size: 1.2em;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
+  padding: 14px 16px;
   transition: color 0.3s ease;
 }
 
 .dropdown:hover .dropbtn {
+  /* Hover effect for dropdown button */
   color: var(--light-pink);
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; /* positions the dropdown content directly below the dropdown button */
-  left: 0;
+  /* Dropdown menu content */
   background-color: var(--black);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(73, 197, 182, 0.25); /* shadow for depth */
-  z-index: 100;
   border: 1px solid var(--teal);
   border-radius: 6px;
-  overflow: hidden; /* ensures dropdown content doesn't overflow the container */
+  box-shadow: 0 8px 16px rgba(73, 197, 182, 0.25);
+  display: none;
+  left: 0;
+  min-width: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
 }
 
 .dropdown-content a {
-  display: block; /* makes the links stack vertically */
+  /* Links inside dropdown */
   color: var(--white);
-  padding: 12px 16px;
-  text-decoration: none;
+  display: block;
   font-weight: normal;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  padding: 12px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-content a:hover {
+  /* Hover effect for dropdown links */
   background-color: var(--light-pink);
   color: var(--black);
 }
 
 .dropdown:hover .dropdown-content {
+  /* Show dropdown on hover */
   display: block;
 }
 
-/*  sections  */
 section {
-  padding: 80px 20px;
-  max-width: 1200px;
+  /* Section container for content blocks */
   margin: 0 auto;
+  max-width: 1200px;
+  padding: 80px 20px;
 }
 
-/*  grids  */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(
-    3,
-    minmax(260px, 1fr)
-  ); /* creates 3 equal columns that are at least 260px wide, but can grow to fill available space */
-  gap: 20px;
-  border-radius: 25px;
-  text-align: center;
-}
-
-.whoarewe-grid {
-  display: contents;
-  grid-template-columns: repeat(
-    1,
-    minmax(260px, 1fr)
-  ); /* single column layout for the who are we section to stack image and text vertically */
-  gap: 20px;
-  border-radius: 25px; /* rounded corners for a softer look */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
-
-/*  table  */
-table th,
-table td {
-  border: 1px solid var(--teal);
-  border-collapse: collapse;
-  font-family: "Roboto", sans-serif;
-  padding: 10px;
+footer {
+  /* Site footer */
+  background: var(--teal-dark);
+  border-top: 1px solid var(--teal);
   color: var(--white);
-}
-
-table th {
-  background-color: var(--teal);
-  color: var(--black);
-  font-weight: bold;
-}
-
-table tr:hover {
-  background-color: rgba(
-    73,
-    197,
-    182,
-    0.1
-  ); /* highlight on hover for better readability */
-}
-
-/* banner */
-#banner {
-  font-family: "Roboto", sans-serif;
-  color: var(--teal);
-  text-align: center;
-  font-size: xx-large; /* larger font size for emphasis */
   padding: 20px;
-}
-
-/*  centered utility  */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* centers the element both vertically and horizontally */
-  color: var(--white);
   text-align: center;
 }
 
-/* lets talk button styling */
-#letstalkbutton {
-  background: var(--teal);
-  color: var(--black);
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  width: 120px;
-  height: 40px;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-#letstalkbutton:hover {
-  background-color: var(--light-pink);
-  color: var(--black);
-}
-
-/*  what are vertical farms section  */
-#whatareverticalfarms {
-  background: var(--teal);
-  color: var(--white);
-  align-content: center;
-}
-
-/* projects section */
-.project-label {
+/* Components */
+.grid {
+  /* Responsive grid layout for cards */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
   text-align: center;
-  text-transform: uppercase; /* uppercase for a more formal feel */
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  color: var(--black);
-  margin-bottom: 8px;
 }
 
-/*  projects- slideshow section  */
-
-* {
-  box-sizing: border-box;
-} /* Hide the images by default */
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 80%; /* limits the width of the slideshow to prevent it from becoming too large on wide screens */
-  max-height: 40%; /* limits the height of the slideshow to prevent it from taking up too much vertical space */
-  position: relative; /* allows for absolute positioning of the next/prev buttons and captions within the slideshow container */
-  margin: auto;
+.grid-2 {
+  /* Two-column grid */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 30px;
 }
 
-.mySlides {
-  width: 100%;
-  height: 50%;
-  border-radius: 25px; /* rounded corners for a softer, more modern look */
-  opacity: 0.9; /* slightly transparent */
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%; /* positions the buttons vertically centered within the slideshow container */
-  width: auto; /* allows the buttons to size based on their content */
-  margin-top: -22px; /* centers the buttons vertically */
-  padding: 16px;
+.card,
+.card h3 {
+  /* Generic card component */
+  background: black, rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  padding: 20px 24px;
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0; /* rounded corners for the buttons */
-  user-select: none; /* prevents text selection on click */
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px; /* rounded corners for the next button */
+.card:hover {
+  /* Hover effect for cards */
+  background: var(--teal-dark);
+  border-color: var(--teal);
 }
 
-/* On hover, add a black background color with a little see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.service-card,
+.benefit-card,
+.teal-card,
+.ai-card {
+  /* Specialized card variants */
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
+.service-card:hover,
+.benefit-card:hover,
+.teal-card:hover,
+.ai-card:hover {
+  /* Hover effects for specialized cards */
+  background: #1a1a1a;
+  border-color: var(--teal-dark);
+}
+
+.ai-card {
+  /* AI-specific card styling */
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.ai-card:hover {
+  /* Hover for AI cards */
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.ai-card h3,
+.ai-card p {
+  /* Text color for AI cards */
+  color: var(--black);
+}
+
+.includes-box {
+  /* Container for includes sections - full width, centered */
+  margin: 40px auto;
+  max-width: 100%;
+  padding: 0 20px;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute; /* position the number text at the top left corner of the slide */
+.includes-box h3 {
+  /* Heading for includes sections */
+  color: var(--teal);
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.checklist {
+  /* Checklist styling with checkmarks */
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.checklist li {
+  /* Checklist items with checkmark */
+  margin-bottom: 12px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.checklist li:before {
+  /* Checkmark symbol */
+  content: "✓";
+  color: var(--teal);
+  font-weight: bold;
+  font-size: 1.2em;
+  position: absolute;
+  left: 0;
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+.checklist-dark {
+  /* Dark text for checklists */
+  color: var(--black);
+}
+
+.team-grid {
+  /* Team member grid */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-card {
+  /* Team member card */
+  align-items: center;
+  background: var(--teal);
+  border-radius: 25px;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.team-card:hover {
+  /* Hover for team cards */
+  background-color: var(--teal-dark);
+}
+
+.team-card-image img {
+  /* Team member image */
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 220px;
+  object-fit: cover;
+  width: 220px;
+}
+
+.team-card-text {
+  /* Team member text content */
+  text-align: left;
+}
+
+.team-card-text h3,
+.team-card-text h4,
+.team-card-text p {
+  /* Text colors for team cards */
+  color: var(--black);
+}
+
+.team-card-text h3 {
+  /* Team member name */
+  font-size: 1.3em;
+  margin-bottom: 4px;
+}
+
+.team-card-text h4 {
+  /* Team member role */
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.team-card-text p {
+  /* Team member bio */
+  margin: 0;
+  text-align: left;
+}
+/* Accessibility */
+.skip-link {
+  left: -9999px;
+  position: absolute;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  background: var(--teal);
+  border-radius: 4px;
+  color: var(--black);
+  left: 6px;
+  padding: 8px;
+  text-decoration: none;
+  top: 7px;
+}
+
+/* Logo */
+.logo {
+  float: left;
+  margin-right: 20px;
+}
+
+/* Forms */
+.form-section {
+  /* Form container */
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 80px 20px;
+}
+
+.form-card {
+  /* Form card styling */
+  background: #111;
+  border: 1px solid var(--teal);
+  border-radius: 16px;
+  padding: 48px 40px;
+}
+
+label {
+  /* Form label styling */
+  color: var(--teal);
+  display: block;
+  font-size: 0.95em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  /* Form input styling */
+  background: #1a1a1a;
+  border: 1px solid var(--teal);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 1em;
+  margin-bottom: 24px;
+  outline: none;
+  padding: 12px 16px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  /* Focus state for form inputs */
+  background: #222;
+  border-color: var(--white);
+}
+
+select {
+  /* Custom select dropdown */
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2349c5b6' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-position: right 14px center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  cursor: pointer;
+}
+
+select option {
+  /* Select option styling */
+  background: #1a1a1a;
+  color: var(--white);
+}
+
+textarea {
+  /* Textarea specific styling */
+  min-height: 140px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  /* Placeholder text color */
+  color: #555;
+}
+
+#successMessage {
+  /* Success message styling */
+  background: var(--teal);
+  border-radius: 8px;
+  color: var(--black);
+  display: none;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+}
+
+#errorMessage {
+  /* Error message styling */
+  background: #c0392b;
+  border-radius: 8px;
+  color: var(--white);
+  display: none;
+  font-weight: 600;
+  margin-top: 20px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* Slideshow */
+.slideshow-container {
+  /* Slideshow container */
+  margin: auto;
+  max-height: 40%;
+  max-width: 80%;
+  position: relative;
+}
+
+.mySlides {
+  /* Individual slides */
+  border-radius: 25px;
+  height: 50%;
+  opacity: 0.9;
+  width: 100%;
+}
+
+.prev,
+.next {
+  /* Navigation arrows */
+  border-radius: 0 3px 3px 0;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: -22px;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  transition: 0.6s ease;
+  user-select: none;
+  width: auto;
+}
+
+.next {
+  /* Right arrow positioning */
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  /* Hover effect for arrows */
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  /* Slide caption text */
+  bottom: 8px;
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 8px 12px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.numbertext {
+  /* Slide number indicator */
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
 .dot {
-  cursor: pointer; /* indicates the dots are clickable */
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  /* Slide indicator dots */
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block; /* makes the dots appear in a line and allows for spacing */
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin: 0 2px;
   transition: background-color 0.6s ease;
+  width: 15px;
 }
 
 .active,
 .dot:hover {
+  /* Active/hover state for dots */
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
-  animation-name: fade;
+  /* Fade animation for slides */
   animation-duration: 1.5s;
+  animation-name: fade;
 }
 
 @keyframes fade {
-  /* simple fade-in animation for slideshow images */
+  /* Keyframes for fade animation */
   from {
     opacity: 0.4;
-  } /* start with a slightly transparent image for a smooth fade-in effect */
+  }
   to {
     opacity: 1;
-  } /* end with fully opaque image */
+  }
 }
 
-footer {
-  background: var(--teal-dark);
-  color: var(--white);
-  text-align: center;
+/* Special sections */
+#banner {
+  /* Banner section styling */
+  color: var(--teal);
+  font-family: "Roboto", sans-serif;
+  font-size: xx-large;
   padding: 20px;
-  border-top: 1px solid var(--teal);
+  text-align: center;
 }
 
-/* how we use AI page */
+.centered,
+.centered h1 {
+  /* Centered text overlay */
+  color: var(--black);
+  text-shadow: 2px 2px 5px var(--teal-dark); /* Subtle shadow for something fun */
+  left: 50%; /* Center horizontally */
+  position: absolute; /* Absolute positioning for overlay */
+  text-align: center; /* Center text within the container */
+  top: 55%; /* Adjusted to be slightly below vertical center for better visual balance */
+  transform: translate(-50%, -50%);/* Translate to perfectly center the text */
+}
+
+#whatareverticalfarms {
+  /* What are vertical farms section */
+  align-content: center;
+  background: var(--teal);
+  color: var(--white);
+}
+
+.project-label {
+  /* Project section label */
+  color: var(--light-pink);
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section-label {
+  /* General section label */
+  color: var(--teal);
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 .intro-text {
+  /* Introduction text styling */
+  line-height: 1.8;
+  margin: 0 auto 60px;
   max-width: 80%;
-  margin: 0 auto 60px; /* centers the text and adds space below for separation from the next section */
   text-align: center;
 }
 
 .intro-text p {
+  /* Paragraphs in intro text */
   font-size: 1.1em;
-  line-height: 1.8;
-}
-
-.section-label {
-  text-align: center;
-  text-transform: uppercase; /* uppercase for a more formal, structured feel */
-  letter-spacing: 0.2em;
-  font-size: 0.8em;
-  color: var(--teal);
-  margin-bottom: 12px;
 }
 
 .ai-images {
-  width: 75%;
-  height: 300px;
+  /* AI images placeholder - centered on page */
+  align-items: center;
   background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
   border: 2px dashed var(--teal);
   border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: var(--teal);
+  display: flex;
   font-size: 1em;
   font-weight: 600;
-  margin: 40px 0;
+  height: 300px;
+  justify-content: center;
   letter-spacing: 0.05em;
-}
-.ai-card {
-  background: rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.25); /* subtle border to define card edges without overpowering the design */
-  border-radius: 16px;
-  padding: 30px 20px;
-  transition: background 0.3s ease;
+  margin: 40px auto;
+  width: 75%;
 }
 
-.ai-card:hover {
-  background: rgba(0, 0, 0, 0.28);
-}
-
-.ai-card h3 {
-  color: var(--black);
-  margin-bottom: 12px;
-  font-size: 1.1em;
-}
-
-.ai-card p {
-  color: var(--black);
-  font-size: 0.95em;
-  text-align: center;
-}
-
-.ai-card .icon {
-  font-size: 2.2em;
-  margin-bottom: 12px;
-}
-
-.benefit-card {
-  background: #111;
-  border: 1px solid var(--teal);
-  border-radius: 16px;
-  padding: 30px 24px;
-  text-align: center;
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease; /* smooth transition for hover effect */
-}
-
-.benefit-card:hover {
-  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
-  border-color: var(--teal-dark);
-}
-
-.benefit-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.05em;
-}
-
-.benefit-card p {
-  font-size: 0.95em;
-  text-align: center;
-}
-
-.service-card {
-  background: #111;
-  border: 1px solid var(--teal);
-  border-radius: 16px;
-  padding: 30px 24px;
-  text-align: center;
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease; /* smooth transition for hover effect */
-}
-
-.service-card:hover {
-  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
-  border-color: var(--teal-dark);
-}
-
-.service-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.05em;
-}
-
-.service-card p {
-  font-size: 0.95em;
-  text-align: center;
-}
-
-.teal-card {
-  background: #111;
-  border: 1px solid var(--teal);
-  border-radius: 16px;
-  padding: 30px 24px;
-  text-align: center;
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease; /* smooth transition for hover effect */
-}
-
-.teal-card:hover {
-  background: #1a1a1a; /* slightly lighter background on hover for visual feedback */
-  border-color: var(--teal-dark);
-}
-
-.teal-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.05em;
-}
-
-.teal-card p {
-  font-size: 0.95em;
-  text-align: center;
+.img-services{
+  /* Image container for services page */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 300px;
+  height: 250px;
 }
 
 .emerging-strip {
-  /* visually distinct section to break up content and highlight emerging trends in vertical farming */
+  /* Emerging technologies strip */
   background: #0d0d0d;
-  border-top: 1px solid var(--teal);
   border-bottom: 1px solid var(--teal);
+  border-top: 1px solid var(--teal);
   padding: 60px 20px;
 }
 
 .emerging-strip .inner {
+  /* Inner container for emerging strip */
+  margin: 0 auto;
   max-width: 900px;
-  margin: 0 auto; /* centers the content */
   text-align: center;
 }
 
 .emerging-strip h2 {
+  /* Heading in emerging strip */
   margin-bottom: 24px;
 }
 
 .emerging-strip p {
+  /* Paragraphs in emerging strip */
   font-size: 1.05em;
   line-height: 1.8;
   margin-bottom: 16px;
 }
 
 .cta-band {
-  background: linear-gradient(
-    120deg,
-    var(--teal),
-    var(--teal-dark)
-  ); /* reuse header gradient for visual consistency */
+  /* Call-to-action band */
+  background: linear-gradient(120deg, var(--teal), var(--teal-dark));
   padding: 60px 20px;
   text-align: center;
 }
 
 .cta-band h2 {
+  /* CTA heading */
   color: var(--black);
   margin-bottom: 16px;
 }
 
 .cta-band p {
+  /* CTA paragraph */
   color: var(--black);
-  font-size: 1.1em; /* slightly larger text for emphasis */
+  font-size: 1.1em;
   margin-bottom: 30px;
 }
 
-/*  responsive  */
+/* Centered image */
+.centered-image {
+  /* Center the vertical farm home image */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Centered image */
+.centered-image {
+  /* Center the vertical farm home image */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tables */
+table th,
+table td {
+  /* Table cell styling */
+  border: 1px solid var(--teal);
+  border-collapse: collapse;
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+}
+
+table th {
+  /* Table header styling */
+  background-color: var(--teal);
+  color: var(--black);
+  font-weight: bold;
+}
+
+table tr:hover {
+  /* Table row hover effect */
+  background-color: rgba(73, 197, 182, 0.1);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  /* adjust grid for smaller screens */
+  /* Tablet and smaller screens */
   .grid {
-    grid-template-columns: 1fr; /* stack items vertically on smaller screens */
+    grid-template-columns: 1fr;
   }
 }
 
-/* who are we - team cards  */
-.team-grid {
-  display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.team-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 40px;
-  background: var(--teal);
-  border-radius: 25px;
-  padding: 40px;
-  transition: background-color 0.3s ease; /* smooth transition for hover effect */
-}
-
-.team-card:hover {
-  background-color: var(--teal-dark);
-}
-
-.team-card-image img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%; /* makes the image circular */
-  object-fit: cover; /* ensures the image covers the area without distortion */
-  flex-shrink: 0; /* prevents the image from shrinking when the card is resized */
-  border: 4px solid var(--white);
-}
-
-.team-card-text {
-  text-align: left;
-}
-
-.team-card-text h3 {
-  color: var(--black);
-  margin-bottom: 4px;
-  font-size: 1.3em;
-}
-
-.team-card-text h4 {
-  color: var(--black);
-  font-weight: 400;
-  margin-bottom: 16px;
-}
-
-.team-card-text p {
-  color: var(--black);
-  text-align: left;
-  margin: 0;
-}
-
-/* stack image above text on small screens */
 @media (max-width: 700px) {
+  /* Mobile landscape */
   .team-card {
     flex-direction: column;
     text-align: center;
@@ -678,184 +782,9 @@ footer {
     text-align: center;
   }
 }
-/*  contact form page  */
-
-/* dropdown styles */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background: none;
-  color: var(--white);
-  padding: 14px 16px;
-  font-size: 1.2em;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.dropdown:hover .dropbtn {
-  color: var(--light-pink);
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--black);
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(73, 197, 182, 0.25);
-  z-index: 100;
-  border: 1px solid var(--teal);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.dropdown-content a {
-  display: block;
-  color: var(--white);
-  padding: 12px 16px;
-  font-weight: normal;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--light-pink);
-  color: var(--black);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.form-section {
-  padding: 80px 20px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.form-card {
-  background: #111;
-  border: 1px solid var(--teal);
-  border-radius: 16px;
-  padding: 48px 40px;
-}
-
-/*  form labels  */
-label {
-  display: block;
-  color: var(--teal);
-  font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 0.95em;
-}
-
-/* form inputs, text area */
-input,
-select,
-textarea {
-  width: 100%;
-  background: #1a1a1a;
-  color: var(--white);
-  border: 1px solid var(--teal);
-  border-radius: 8px;
-  padding: 12px 16px;
-  font-size: 1em;
-  margin-bottom: 24px;
-  transition:
-    border-color 0.3s ease,
-    background 0.3s ease;
-  /* removes default browser outline and replaces with our own */
-  outline: none;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: var(--white);
-  background: #222;
-}
-
-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2349c5b6' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 18px;
-  cursor: pointer;
-}
-
-/* style the select options */
-select option {
-  background: #1a1a1a;
-  color: var(--white);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-/* placeholder text colour */
-input::placeholder,
-textarea::placeholder {
-  color: #555;
-}
-
-/*  submit button */
-#submitbutton {
-  background: var(--teal);
-  color: var(--black);
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  padding: 14px;
-  font-size: 1em;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-  margin-top: 8px;
-}
-
-#submitbutton:hover {
-  background-color: var(--light-pink);
-  color: var(--black);
-}
-
-/* message for successful submission */
-#successMessage {
-  /* camel case for ease of reading */
-  display: none;
-  background: var(--teal);
-  color: var(--black);
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-/* error message */
-#errorMessage {
-  /* camel case for ease of reading */
-  display: none;
-  background: #c0392b;
-  color: var(--white);
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-}
 
 @media (max-width: 600px) {
+  /* Mobile portrait */
   .form-card {
     padding: 32px 20px;
   }
@@ -867,27 +796,4 @@ textarea::placeholder {
   nav ul {
     gap: 12px;
   }
-}
-.service-img {
-  width: 80%;
-  height: 40%;
-  border-radius: 8px;
-}
-
-.credential-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-
-.includes-box {
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.includes-box-teal {
-  margin: 0 auto;
-  max-width: 800px;
 }

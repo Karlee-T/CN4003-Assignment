@@ -199,7 +199,7 @@ footer {
 .card,
 .card h3 {
   /* Generic card component */
-  background: black, rgba(0, 0, 0, 0.8);
+  
   border-radius: 16px;
   padding: 20px 24px;
   text-align: center;
@@ -537,8 +537,8 @@ textarea::placeholder {
   bottom: 8px;
   color: #f2f2f2;
   font-size: 16px;
-  font-weight: 300;
-  padding: 8px 12px;
+  font-weight: bold;
+  padding: 12px 12px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -547,7 +547,8 @@ textarea::placeholder {
 .numbertext {
   /* Slide number indicator */
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -601,11 +602,11 @@ textarea::placeholder {
 .centered h1 {
   /* Centered text overlay */
   color: var(--black);
-  text-shadow: 2px 2px 5px var(--teal-dark); /* Subtle shadow for something fun */
+  text-shadow: 2px 2px 5px var(--teal-dark); /* teal shadow for something fun */
   left: 50%; /* Center horizontally */
   position: absolute; /* Absolute positioning for overlay */
   text-align: center; /* Center text within the container */
-  top: 55%; /* Adjusted to be slightly below vertical center for better visual balance */
+  top: 35%; /* Adjusted to be slightly below vertical center for better visual balance */
   transform: translate(-50%, -50%);/* Translate to perfectly center the text */
 }
 
@@ -796,4 +797,201 @@ table tr:hover {
   nav ul {
     gap: 12px;
   }
+}
+/* ── AI FEATURE TABLE SECTION ── */
+
+.ai-table-section {
+    background: var(--black);
+    padding: 80px 20px;
+    border-top: 1px solid rgba(73, 197, 182, 0.2);
+    border-bottom: 1px solid rgba(73, 197, 182, 0.2);
+}
+
+.ai-table-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* reuse .section-label from existing css */
+
+.ai-table-heading {
+    color: var(--teal);
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.ai-table-intro {
+    color: var(--white);
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 48px;
+    font-size: 1em;
+    opacity: 0.85;
+}
+
+/* ── TABLE WRAPPER — allows horizontal scroll on small screens ── */
+.ai-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--teal);
+}
+
+/* ── TABLE ── */
+.ai-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.92em;
+    min-width: 700px; /* prevents squishing before scroll kicks in */
+}
+
+/* ── HEADER ROW ── */
+.ai-table thead tr {
+    background: var(--teal);
+}
+
+.ai-table thead th {
+    color: var(--black);
+    font-weight: 700;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 0.9em;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: none;
+}
+
+/* ── BODY ROWS ── */
+.ai-table tbody tr {
+    border-bottom: 1px solid rgba(73, 197, 182, 0.15);
+    transition: background 0.25s ease;
+}
+
+/* alternating row shading */
+.ai-table tbody tr:nth-child(even) {
+    background: rgba(73, 197, 182, 0.04);
+}
+
+.ai-table tbody tr:hover {
+    background: rgba(73, 197, 182, 0.12);
+}
+
+.ai-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* ── CELLS ── */
+.ai-table td {
+    padding: 16px 20px;
+    color: var(--white);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.55;
+    border: none;
+}
+
+/* ── FEATURE NAME COLUMN ── */
+.feature-name {
+    font-weight: 700;
+    color: var(--teal) !important;
+    white-space: nowrap;
+    min-width: 180px;
+}
+
+.feature-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+/* ── HUMAN INPUT BADGE ── */
+.input-level {
+    font-weight: 700;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    padding: 6px 14px !important;
+}
+
+.input-level.low {
+    color: #49c5b6; /* teal — none required */
+}
+
+.input-level.medium {
+    color: #f0c040; /* amber — occasional */
+}
+
+.input-level.high {
+    color: #FFC0CB; /* light-pink — scheduled */
+}
+
+/* ── LEGEND ── */
+.ai-table-legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 24px;
+    font-size: 0.85em;
+    color: rgba(255,255,255,0.6);
+}
+
+.legend-label {
+    font-weight: 600;
+    color: rgba(255,255,255,0.8);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.7);
+}
+
+.dot-legend {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-legend.low    { background: #49c5b6; }
+.dot-legend.medium { background: #f0c040; }
+.dot-legend.high   { background: #FFC0CB; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+    .ai-table-section {
+        padding: 60px 12px;
+    }
+
+    .ai-table thead th,
+    .ai-table td {
+        padding: 12px 14px;
+    }
+
+    .feature-name {
+        white-space: normal;
+        min-width: 140px;
+    }
+}
+
+#letstalkbutton {
+    background: var(--teal);
+    color: var(--black);
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#letstalkbutton:hover {
+    background-color: var(--light-pink);
+    color: var(--black);
 }
